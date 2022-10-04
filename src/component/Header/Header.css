@@ -3,4 +3,11 @@
     text-align: none;
     margin-right: 10px;
     font-size: 18px;
+    padding: 10px;
+
+}
+
+.header a:hover {
+    background-color: peru;
+    color: white;
 }
