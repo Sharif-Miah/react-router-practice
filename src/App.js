@@ -5,6 +5,7 @@ import About from './component/About/About';
 import Products from './component/Products/Products';
 import Main from './Layout/Main';
 import Friends from './component/Friends/Friends';
+import FriendDetails from './component/FriendDetails/FriendDetails';
 
 
 
@@ -23,6 +24,13 @@ function App() {
             return fetch('https://jsonplaceholder.typicode.com/users')
           },
           element: <Friends />
+        },
+        {
+          path: '/friend/:friendId',
+          loader: async ({ params }) => {
+            return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
+          },
+          element: <FriendDetails />
         },
         { path: '*', element: <h1>This is NOT Found Component 404.</h1> },
       ]
