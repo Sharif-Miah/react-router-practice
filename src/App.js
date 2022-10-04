@@ -17,7 +17,13 @@ function App() {
         { path: '/home', element: <Home /> },
         { path: '/about', element: <About /> },
         { path: 'products', element: <Products /> },
-        { path: 'friends', element: <Friends /> },
+        {
+          path: 'friends',
+          loader: async () => {
+            return fetch('https://jsonplaceholder.typicode.com/users')
+          },
+          element: <Friends />
+        },
         { path: '*', element: <h1>This is NOT Found Component 404.</h1> },
       ]
     },
