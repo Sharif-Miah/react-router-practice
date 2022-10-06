@@ -1,0 +1,16 @@
+.post-border {
+    border: 2px solid salmon;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 12px 20px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 3px;
+}
